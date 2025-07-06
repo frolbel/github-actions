@@ -1,0 +1,8 @@
+name: First Workflow
+on: [push]
+jobs:
+  run-fist-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display some text
+        run: echo "Some Text"
