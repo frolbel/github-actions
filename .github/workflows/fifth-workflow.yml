@@ -1,8 +1,13 @@
 name: fifth-workflow
 on: 
-  - push
-  - issues
-  - pull_request
+  issues:
+    types:
+      - edited
+      - deleted
+  pull_request:
+    types: 
+      - assigned
+      - closed
 jobs:
   run-fiveth-commamnd:
     runs-on: ubuntu-latest
