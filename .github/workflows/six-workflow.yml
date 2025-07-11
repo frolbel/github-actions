@@ -9,7 +9,7 @@ on:
     # tags:
     #   - v1.* # v.1.0, v.1.1, ...
     paths:
-      - *.html
+      - "**.html"
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
