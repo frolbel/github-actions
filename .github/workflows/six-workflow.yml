@@ -10,6 +10,7 @@ on:
     #   - v1.* # v.1.0, v.1.1, ...
     paths:
       - "**.html"
+      - "**.js"
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
