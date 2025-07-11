@@ -1,0 +1,20 @@
+name: Six Workflow
+on:
+  push:
+    branches:
+      - main
+      - "page/*" # page/about, page/blog, page/contact, ...
+      - "page/**" # page/category/lifestyle
+      - "!page/blog" # исключить page/blog"
+    # tags:
+    #   - v1.* # v.1.0, v.1.1, ...
+    paths:
+      - *.html
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Vars
+        run: |
+          echo $GITHUB_SHA
+    
