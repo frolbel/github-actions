@@ -5,6 +5,7 @@ run-name: "Show secrets and variables"
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
+    environment: "producion"
     steps:
       - name: Echo secrets and variables
         run: |
