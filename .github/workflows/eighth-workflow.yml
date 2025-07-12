@@ -7,9 +7,27 @@ on:
         type: string
         required: true
         default: "Hello World!"
+      selectCustom:
+        description: "Select value"
+        type: choice
+        required: true
+        options:
+          - Value 1
+          - Value 2
+          - Value 3
+          - Value 4
+          - Value 5
+        default: "Value 2"
+      checkCustom:
+        description: Checkbox
+        type: boolean
+        required: false
 jobs:
   Echo-Hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World!"
+      - run: |
+          echo "Title: ${{ inputs.titleCustom }}"
+          echo "Select: ${{ inputs.selectCustom }}"
+          echo "Checkbox: ${{ inputs.checkCustom }}"
     
