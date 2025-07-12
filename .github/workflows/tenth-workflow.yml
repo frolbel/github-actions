@@ -1,6 +1,7 @@
 name: Tenth Workflow
 on: 
   - push
+run-name: "Show contexts"
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
@@ -12,3 +13,5 @@ jobs:
           echo "${{ toJson(runner) }}"
           echo "${{ toJson(job) }}"
           echo "${{ toJson(steps) }}"
+      - name: Show steps context
+        run: echo "${{ toJson(steps) }}"
