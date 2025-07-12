@@ -1,0 +1,13 @@
+# see also: https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-a-repository-dispatch-event
+name: Ninth Workflow
+on:
+  repository_dispatch:
+    types:
+      - test
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Vars
+        run: |
+          echo "client_payload: ${{ github.event.client_payload.titleTest }}"
