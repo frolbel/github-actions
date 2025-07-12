@@ -1,6 +1,12 @@
 name: Eighth workflow
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      titleCustom:
+        description: Type the title
+        type: string
+        required: true
+        default: "Hello World!"
 jobs:
   Echo-Hello:
     runs-on: ubuntu-latest
