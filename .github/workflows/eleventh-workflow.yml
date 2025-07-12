@@ -1,0 +1,12 @@
+name: Eleven Workflow
+on:
+  - push
+run-name: "Show secrets and variables"
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo secrets and variables
+        run: |
+          echo "${{ vars.STATUS }}"
+          echo "${{ secrets.PASSWORD }}"
