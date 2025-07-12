@@ -1,0 +1,10 @@
+name: Seven Workflow
+on:
+  schedule:
+    - cron: "*/2 * * * *" # min hour day month d/w
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Vars
+        run: echo ${{ github.event.client_playload.titleTest }}
