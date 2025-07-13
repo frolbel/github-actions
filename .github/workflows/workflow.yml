@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print title
-        run: ${{ inputs.title }}
+        run: echo ${{ inputs.title }}
