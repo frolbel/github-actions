@@ -19,7 +19,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: math-result
-      - name: Print File
+      - name: Math Expression
         run: |
           value=`cat math-result.txt`
           expr $value \* 2 > math-result.txt
