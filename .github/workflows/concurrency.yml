@@ -1,6 +1,8 @@
 name: Concurrency Test
 on: workflow_dispatch
-concurrency: concurrency-test
+concurrency: 
+  group: concurrency-test
+  cancel-in-progress: true # Run only the last workflow
 jobs:
   concurrency-test:
     runs-on: ubuntu-latest
