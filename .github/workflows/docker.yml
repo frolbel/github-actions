@@ -12,3 +12,4 @@ jobs:
       - name: "Display Node Version"
         run: |
           node -v
+          cat /etc/os-release
