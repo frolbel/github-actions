@@ -8,4 +8,4 @@ jobs:
       - name: Use Custom Action
         uses: ./.github/actions/cache-node-modules
         with:
-          caching: 'false'
+          caching: 'true'
