@@ -1,0 +1,14 @@
+name: Docker Test
+on: push
+
+jobs:
+  test-docker-container:
+    runs-on: ubuntu-latest
+    container: 
+      image: node:alpine3.22
+      env:
+        NODE_ENV: development
+    steps:
+      - name: "Display Node Version"
+        run: |
+          node -v
