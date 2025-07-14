@@ -13,7 +13,7 @@ jobs:
         NODE_ENV: development
     steps:
       - name: "Display service image"
-        run: echo `${{ toJson(job.services.customMysql) }}`
+        run: echo "${{ toJson(job.services.customMysql) }}"
       - name: "Display Node Version"
         run: |
           node -v
