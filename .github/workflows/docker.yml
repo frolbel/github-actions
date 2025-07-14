@@ -4,11 +4,16 @@ on: push
 jobs:
   test-docker-container:
     runs-on: ubuntu-latest
+    services:
+      customMysql:
+        image: mysql:9.3
     container: 
       image: node:alpine3.22
       env:
         NODE_ENV: development
     steps:
+      - name: "Display service image"
+        run: echo `${{ toJson(job.services.customMysql) }}`
       - name: "Display Node Version"
         run: |
           node -v
