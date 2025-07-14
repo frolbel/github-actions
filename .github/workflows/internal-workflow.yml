@@ -7,9 +7,19 @@ on:
         type: string
         default: "Testing test title"
         required: false
+    outputs:
+      date:
+        value: ${{ jobs.generate-output.outputs.date }}
 jobs:
   console-log:
     runs-on: ubuntu-latest
     steps:
       - name: Print title
         run: echo ${{ inputs.title }}
+  generate-output:
+    runs-on: ubuntu-latest
+    outputs:
+      date: ${{ steps.date-step.outputs.date }}
+    steps:
+      - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+        id: date-step
