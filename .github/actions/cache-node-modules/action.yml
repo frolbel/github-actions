@@ -4,17 +4,17 @@ inputs:
   caching:
     required: false
     description: "Enable or disable caching"
-    default: "true"
+    default: 'true'
 outputs:
   status:
     value: "Active"
     description: "Some Status"
-    
+
 runs:
   using: composite
   steps:
     - name: Cache node_modules
-      if: inputs.caching == "true"
+      if: inputs.caching == 'true'
       id: cache-steps
       uses: actions/cache@v4
       with:
