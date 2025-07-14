@@ -1,4 +1,4 @@
-name: Sevemteenth Workflow
+name: Seventeenth Workflow
 on: 
   workflow_dispatch:
     inputs:
